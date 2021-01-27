@@ -1,0 +1,513 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* box-sizing is border box bcz if border apply then every thing should be inside boder
+also apply on pesudo elements before & after */
+*, 
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* normal font size is 16px, we have changed it to 10px bcz it helps to make 
+website responsive easily and calculation are also easy to adjust other elemnts font
+sizes */
+html {
+    /* font-size by default is 16px  */
+    /* font-size: 10px; (10/16*100) = 62,5% */
+    font-size: 62.5%;
+    scroll-behavior:smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* ############ Utility Classes #############################*/
+
+.container {
+    max-width: 1200px;
+    width: 90%; /* when user reduce screen size then text adjust its width with its parent */
+    margin: 0 auto;
+}
+
+/* .contaoiner1 {
+    max-width: 200px;
+    width: 50%;
+    margin: 0 auto;
+} */
+
+.bg-dark {
+    background: #263238;
+}
+
+.lg-heading {
+    font-size: 3.2rem; /* 32px */
+}
+
+.md-heading {
+    font-size: 2rem; /* 20px */
+}
+
+/* color used in web */
+.text-red {
+    color: #e63946
+}
+.text-light {
+    color: #f4f4f4
+}
+
+.text-black {
+    color: #333333
+}
+.text-gray {
+    color: #555555
+}
+
+
+.btn {
+    display: inline-block; /* a tage or inline, after block it is easy to give padding, margin etc */
+    padding: 0.5em 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0.5em 0;
+    box-shadow: 2px 2px 2px 2px #555555;
+}
+.btn-primary {
+    background: #b8b6b6;
+    border-radius: 10em; /* 100px  */
+    text-decoration: none;
+}
+.btn-primary:hover {
+    background: #dddddd;
+}
+
+.btn-secondary {
+    border: 2px solid #e63946;
+    border-radius: 1.5em; 
+    color: #e63946;
+    background: white;
+}
+.btn-secondary:hover {
+    background: #dddddd ;
+}
+
+.para{
+    font-size: 1.6rem;
+    /* color: #ffffff; */
+    font-weight: 600;
+}
+
+/* ############ End Utility Classes #############################*/
+
+
+/* ############ CONTACT HEADER #############################*/
+#contact-header {
+    background: #c8c8c8d2;
+}
+.contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.social-media-links {
+    width: 50%;    
+}
+.social-media-links i {
+    margin: 1rem 2rem 1rem 1rem;
+}
+.phone {
+    width: 50%;
+    text-align: right;
+    margin: 1rem 1rem 1rem 1rem;
+}
+.phone a {
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-left: 1rem;
+}
+.phone span {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* ############ END CONTACT HEADER #############################*/
+
+
+/* ############################Nav bar styling ###################################### */
+/* for desktop version--> hamburger menu items should not display on desktop version */
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines {
+    display: none;
+}
+
+.navbar {
+    box-shadow: 0px 5px 10px 0px #aaaaaa;
+    position: fixed; /* when position is fiexed its out of html flow and and go to its top left */
+    width: 100%;  /* thats why we given width 100%  */
+    background: #ffffff;
+    color: #000000;
+    opacity: 0.85; /* its position is fixed while scrolling everything behind it */
+    z-index: 10; /* everthing goes behind this nav bar */
+}
+
+
+
+.navbar-container {
+    display: flex;
+    justify-content:space-around;
+    height: 64px;
+    align-items: center;
+    /* border: 2px solid black; */
+}
+
+/* logo need to display left side, change the order of items */
+.navbar-items {
+    order: 2;
+    display: flex;
+    
+}
+.logo {
+    order: 1;
+    font-size: 3.5rem;
+}
+
+.navbar-items li {
+    list-style: none;
+    margin: 1.5rem; 
+    /* 15px, rem adjust its according to main root(html), while em adjust
+    according to its root element */
+    font-size: 1.6rem;  /* 18px */
+}
+.navbar a {
+    color: #12128d;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out; /* nav items change its color smoothly */
+}
+.navbar a:hover{
+    color: #117964;
+}
+
+
+
+/* ###################### ShowCase Area ##################################### */
+
+.showcase-area {
+    background-image:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("./images/header2.jpg");
+    height: 50vh;
+    background-size:cover;
+    background-position: center;
+    background-repeat:no-repeat;
+    color: #ffffff;
+}
+
+.showcase-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    /* border: 2px solid black; */
+    height: 100%;
+    font-size: 1.6rem; 
+    
+    
+}
+
+.main-title {
+    text-transform: uppercase;
+    
+}
+.showcase-container a {
+    display: inline-block;
+    text-decoration: none;
+    margin-bottom: 3rem;
+}
+
+
+/* ###################### End ShowCase Area ##################################### */
+
+
+/* ###################### Advantages Section ##################################### */
+#advantages {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    background: #ebe8e8;
+    /* border: 2px solid black; */
+    box-shadow: 0px 5px 10px 0px #aaaaaa;
+}
+.advantages-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.advantages-icons {
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid black; */
+    margin-bottom: 2rem;
+    box-shadow: 0px 5px 10px 0px #aaaaaa;
+    
+}
+
+
+.advantages-icons .icon {
+    border: 2px solid black;
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem;
+    transition: transform 2s ease-in-out;
+}
+.advantages-icons .icon:hover{
+    transform: scale(1.5);
+    opacity: 0.8;
+    border-color: #12128d;
+}
+.far, .fas {
+    margin-bottom: 2rem;
+}
+.far:hover{
+    color:#12128d;
+}
+.fas:hover{
+    color: #12128d;
+}
+
+.advantages-content {
+    text-align: center;
+    margin:2rem auto;
+    width: 40%;
+    
+}
+
+.advantages-content h1 {
+    font-size: 3rem;
+}
+.advantages-icons p {
+    margin-top:0.5rem;
+    font-size: 1.2rem;
+}
+
+
+/* ###################### End Advantages Section ##################################### */
+
+
+
+/* ###################### About Section ##################################### */
+
+/* #about {
+    background: #f3f0f0;
+} */
+#about h1 {
+    text-align: center;
+    font-size: 3rem;
+}
+.about-container {
+    display: flex;
+     flex-wrap: wrap;
+    justify-content: space-between;
+    /* border: 2px solid black; */
+}
+.about-readmore {
+    flex: 1 1 300px;
+    margin: auto;
+    padding: 3rem;
+    /* border: 2px solid green; */
+}
+
+.about-img {
+    flex: 1 1 600px;
+    padding: 3rem;
+    
+    
+}
+
+.about-img img {
+    display: block;
+    max-width: 100%;
+    height: 400px;
+    margin: auto;
+    object-fit: cover;  /* image should not shrink */
+    object-position: top; 
+    /* on small screen which part of the image should be focused */
+    box-shadow: 0px 5px 10px 0px #aaaaaa; 
+}
+
+
+/* ###################### End About Section ##################################### */
+
+
+
+
+/* ###################### Service Section ##################################### */
+#services {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    background: #ebe8e8;
+    /* border: 2px solid black; */
+    box-shadow: 0px 5px 10px 0px #aaaaaa;
+}
+.services-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.services-icons {
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid black; */
+    margin-bottom: 2rem;
+    /* box-shadow: 0px 5px 10px 0px #aaaaaa; */
+    
+}
+.services-icons .icon {
+    border: 2px solid black;
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem;   
+}
+
+.star-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.services-icons h3 {
+    position: relative;
+    bottom: 2rem;
+    /* border: 2px solid black; */
+}
+.services-icons i {
+    /* border: 2px solid black; */
+    position: relative;
+    bottom:3rem;
+    color: goldenrod;
+    /* background: coral; */
+    animation: beat 1s ease-in-out 1s infinite;
+}
+/* this code for star animation */
+@keyframes beat {
+    0% {
+        transform: scale(1)
+    }
+    25% {
+        transform: scale(1.5)
+    }
+    50% {
+        transform: scale(2)
+    }
+    75% {
+        transform: scale(1.5)
+    }
+    100% {
+        transform: scale(1);
+    }
+
+}
+/* -----------End Star Animation  */
+
+
+.services-content {
+    text-align: center;
+    margin:2rem auto;
+    width: 40%;    
+}
+
+.services-content h1 {
+    font-size: 3rem;
+}
+.services-content p {
+    font-size: 1.5rem;
+}
+.services-icons p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.services-icons a {
+    max-width: 50%;
+    
+}
+/* ###################### End Service Section ##################################### */
+
+
+
+/* ###################### Portfilio Section ##################################### */
+#portfilio {
+background: #e9e2e2;
+}   
+.portfilio-wrapper {
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.portfilio-content h1 {
+    text-align: center;
+    font-size: 3.2rem;
+}
+.portfilio-content p {
+    font-size: 1.5rem;
+    /* margin-bottom: 1rem; */
+    max-width: 80%;
+    text-align: center;
+    margin: auto;
+       
+}
+.portfilio-menu .navbar-items {
+    margin-left: 5rem;
+    
+}
+.portfilio-menu .navbar-items li {
+    text-transform: uppercase;
+}
+
+.portfilio-menu .navbar-items li a {
+    text-decoration: none;
+    color: #555555;
+    font-weight: 500;
+}
+.portfilio-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+    background: #bdbaba;
+    box-shadow: 0px 5px 10px 0px #aaaaaa;
+}
+.portfilio-items .project {
+    width: 25%;
+    height: 200px;
+    
+    border: 2px solid #b8b6b6;
+    margin: 1rem;
+    box-shadow: 0px 5px 10px 0px #aaaaaa;
+}
+
+.portfilio-items .project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 1s ease-in-out;
+}
+.portfilio-items .project img:hover {
+    transform: scale(1.5);
+    opacity: .8;
+}
+
+
+/* ###################### End Portfilio Section ##################################### */
+
+
