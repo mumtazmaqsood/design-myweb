@@ -263,7 +263,28 @@ body {
     padding: 2rem;
     margin: 2rem;
     transition: transform 2s ease-in-out;
+    /* animation: motion 6s ease-in-out 0.5s infinite; */
 }
+
+
+/* @keyframes motion {
+    0% {
+        transform: scale(0);
+    }
+    25% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    75% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(0);
+    }
+} */
+
 .advantages-icons .icon:hover{
     transform: scale(1.5);
     opacity: 0.8;
@@ -323,8 +344,7 @@ body {
 
 .about-img {
     flex: 1 1 600px;
-    padding: 3rem;
-    
+    padding: 3rem; 
     
 }
 
@@ -506,7 +526,251 @@ background: #e9e2e2;
     opacity: .8;
 }
 
-
 /* ###################### End Portfilio Section ##################################### */
 
 
+
+/* ###################### Process Section ##################################### */
+#process {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    background: #ffffff;
+    /* border: 2px solid black; */
+    box-shadow: 0px 5px 10px 0px #aaaaaa;
+}
+.process-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.process-icons {
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid black; */
+    margin-bottom: 2rem;
+    box-shadow: 0px 5px 10px 0px #aaaaaa;
+    
+}
+
+
+.process-icons .icon {
+    /* border: 2px solid black; */
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem;
+    
+    
+    
+}
+.process-wrapper #arrow {
+    position: absolute;
+    left: 12rem;
+    top: 24rem;
+    /* border: 2px solid red; */
+}
+
+/* .process-icons .icon:not(:last-child):after{
+    content: '';
+    display: block; 
+    border: 3px solid #e63946;
+    width: 100%;
+} */
+
+.process-icons .icon i{
+    border: 4px solid black;
+    padding: 2rem;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+/* animated line */
+
+/* .line-div {
+    display: inline-block;
+}
+.process-icons .line {
+    width: 1rem;
+    height: 1rem;
+    background-color: rgb(168, 91, 91);
+    animation-name: line;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation: line 2s linear infinite ease-in-out;
+    transform-origin: 0% 0% 0px;
+  }
+  
+  @keyframes line {
+    0% {
+          transform: scaleX(0);
+      }
+      10% {
+          transform: scaleX(10);
+      }
+      20% {
+        transform: scaleX(20);
+    }
+    30% {
+        transform: scaleX(30);
+    }
+    40% {
+        transform: scaleX(40);
+    }
+    50% {
+        transform: scaleX(50);
+    }
+    60% {
+        transform: scaleX(60);
+    }
+    70% {
+      transform: scaleX(70);
+  }
+    80% {
+      transform: scaleX(80);
+  }
+    90% {
+      transform: scaleX(90);
+  } */
+   /*  100% {
+      transform: scaleX(100);
+  } 
+  }/
+
+/* end animated line */
+.far, .fas {
+    margin-bottom: 2rem;
+}
+/* .far:hover{
+    color:#12128d;
+}
+.fas:hover{
+    color: #12128d;
+}
+ */
+.process-content {
+    text-align: center;
+    margin:2rem auto;
+    width: 40%;
+    
+}
+
+.process-content h1 {
+    font-size: 3rem;
+}
+.process-icons p {
+    margin-top:0.1rem;
+    font-size: 1.4rem;
+}
+
+
+/* ###################### End Process Section ##################################### */
+
+
+
+
+/* ###################### Testimonal Section ##################################### */
+/* section testimonials id testimonials
+            h2 testimonal.title     
+            div testimonal-container container
+                div testimonal-box * 3
+                    div start-rating
+                        span*5
+                    p.testimonal-text
+                    div customer-detail
+                        div customer-photo
+                            img male-photo1
+                        p.customer-name 
+            /div
+    */
+
+    #testimonals {
+        padding: 5rem 0;
+        background: rgb(240,240,240);
+    }
+    
+    .testimonal.title {
+        font-size: 3rem;
+        color: #666666;
+        font-weight: 400;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    
+    .testimonal-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        font-size: 1.3rem;
+    
+    }
+    
+    .customer-photo img {
+        display: block;
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 50%;
+        margin: auto;
+    }
+    
+    .star-rating {
+        text-align: center;
+        color: gold;
+    }
+    .testimonal-box .testimonal-text {
+        /* text-align: center; */
+        margin-bottom: 1rem 0;
+        color: #444444;
+    }
+    
+    .testimonal-box {
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    /* ###################### End Testimonal Section ##################################### */
+    
+    .services-wrapper {
+        display: flex;
+        flex-direction: column;
+        border: 4px solid black;
+        
+    }
+    .services-chart {
+        display: flex;
+        justify-content: space-around;
+        border: 4px solid black;
+        width: 80%;
+        height: 200px;
+    }
+
+    .services-chart .chart {
+        font-size: 2rem;
+        /* border: 2px solid red; */
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    /* .services-chart .chart .circle {
+        width: 100px;
+        height:100px;
+        border: 2px solid red;
+        border-radius: 50%;
+        background: black;
+        margin: 0 auto;
+    } */
+    
+    /* new code  */
+    .percent1,  svg, .circle {
+        width: 100px;
+        height: 100px;
+    }
+    /* end code */
+
+
+    /* end our services */
