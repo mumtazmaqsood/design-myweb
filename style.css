@@ -1,6 +1,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+
+
 /* box-sizing is border box bcz if border apply then every thing should be inside boder
 also apply on pesudo elements before & after */
 *, 
@@ -735,10 +737,13 @@ background: #e9e2e2;
     
     /* ###################### End Testimonal Section ##################################### */
     
+
+
     .services-wrapper {
         display: flex;
         flex-direction: column;
         border: 4px solid black;
+        
         
     }
     .services-chart {
@@ -774,3 +779,226 @@ background: #e9e2e2;
 
 
     /* end our services */
+
+/* ###################### Packages Section ##################################### */
+#packages {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    background: #f8f6f6;
+    /* border: 2px solid black; */
+    box-shadow: 0px 5px 10px 0px #aaaaaa;
+}
+.packages-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+.packages-deal {
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid black; */
+    margin-bottom: 2rem;
+    box-shadow: 0px 5px 10px 0px #aaaaaa;
+    
+    
+    
+}
+.deal h2 {
+    font-size: 3rem;
+}
+.deal p{
+    font-size: 1.2rem;
+    line-height: 3rem;
+}
+.deal a {
+    position: absolute;
+    margin-left: -4rem;
+    /* transform: translate(-50% -50%); */
+}
+.packages-deal h3::after{
+    content: '';
+    display: block;
+    /* border: 2px soild #e63946; */
+    border: 1px solid #e63946;
+    /* width: 100%; */
+}
+
+
+.packages-deal .deal {
+    border: 2px solid black;
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem;
+    /* width: 100%; */
+    transition: transform 2s ease-in-out;
+    /* animation: motion 6s ease-in-out 0.5s infinite; */
+}
+
+
+/* @keyframes motion {
+    0% {
+        transform: scale(0);
+    }
+    25% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    75% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(0);
+    }
+} */
+
+.packages-deal .deal:hover{
+    transform: scale(1.5);
+    opacity: 0.8;
+    border-color: #12128d;
+}
+
+
+.packages-content {
+    text-align: center;
+    margin:2rem auto;
+    width: 40%;
+    
+}
+
+.packages-content h1 {
+    font-size: 3rem;
+}
+.package-deal p, .packages-content p {
+    margin-top:0.5rem;
+    font-size: 1.2rem;
+}
+
+
+/* ###################### End Packages Section ##################################### */
+
+
+/* ###################### Contact Section ##################################### */
+/* 
+section #contact
+            div .contact-container .container   flex
+                div .contact-image
+                    img
+                /div
+                div .from-container
+                    h2 contact-us
+                    input name
+                    input email
+                    textarea message
+                    a .btn .btn-primary */
+
+
+    #contact {
+        padding: 5rem 0;
+        background: rgb(226, 226, 226); 
+    }
+    .contact-container {
+        display: flex;
+        background: #ffffff;
+        justify-content: space-between;
+    }
+    
+    .contact-image {
+        width: 50%;
+    }
+    
+    .contact-image img {
+        display: block;
+        width: 75%;
+        height: 400px;
+        object-fit: cover;
+        object-position: bottom;
+    }
+    
+    .form-container {
+        padding: 1rem;
+        width: 50%;
+        margin: auto;
+        
+        /* display: flex;
+        flex-direction: column; */
+    }
+    .form-container input, .form-container textarea {
+        display: block;
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid #ddd;
+        padding: 1rem 0;
+        box-shadow: none;
+        outline: none;
+        margin-bottom: 1rem;
+        color: #444444;
+        font-weight: 500;
+    }
+    
+    .form-container h2 {
+        font-size: 3rem;
+        font-weight: 400;
+        color: #444444;
+        margin-bottom: 1rem;
+    }
+    
+    .form-container a {
+        font-size: 1.2rem;
+        /* align-self: flex-end; */
+        
+    }
+    
+    /* ###################### End Contact Section ##################################### */
+    
+
+    /* ######################## Footer Section################################ */
+
+    #footer {
+        background: #666666;
+        color:#e7e2e2;
+        margin-bottom: 1rem;
+    }
+    .footer-wrapper {
+        display: flex;
+        justify-content: space-around;
+    }
+    .footer-item {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+
+
+    .footer-item a {
+        color: #f3ecec;
+        text-decoration: none;
+        font-weight: 300;
+        position: relative;
+    }
+    .footer-item h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    .social-media-footer {
+        display: flex;
+        justify-content: space-between;
+    }
+    .social-media-footer i {
+        font-size: 2rem;
+    }
+
+    /* .footer-item::after {
+        content: '';
+        display: inline-block;
+        border: 2px solid red;
+        width: 100%;
+        position: absolute;
+        left:-1rem;
+    } */
+    
+    /* ######################## End Footer Section################################ */
