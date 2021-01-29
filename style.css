@@ -738,47 +738,106 @@ background: #e9e2e2;
     /* ###################### End Testimonal Section ##################################### */
     
 
+    /* ###################### Skill Section ##################################### */
+    
+      #skills {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        background: #ffffff;
+        /* border: 2px solid black; */
+        box-shadow: 0px 5px 10px 0px #aaaaaa;
+        
+    }
 
-    .services-wrapper {
+    .skill-wrapper {
         display: flex;
         flex-direction: column;
-        border: 4px solid black;
-        
-        
+        justify-content: center;
+        align-items: center;
+        /* border: 4px solid black; */
+             
+                
     }
-    .services-chart {
+    .skill-chart {
         display: flex;
-        justify-content: space-around;
-        border: 4px solid black;
-        width: 80%;
+        /* justify-content: space-between; */
+        /* border: 4px solid black; */
+        width: 100%;
         height: 200px;
+        box-shadow: 0px 5px 10px 0px #aaaaaa;
+        margin-bottom: 2rem;
+        /* position: relative; */
     }
 
-    .services-chart .chart {
+    .skill-chart .chart {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         font-size: 2rem;
-        /* border: 2px solid red; */
         width: 100%;
         text-align: center;
         margin-bottom: 1rem;
+        /* border: 2px solid red; */
+        position: relative;
     }
-    /* .services-chart .chart .circle {
-        width: 100px;
-        height:100px;
-        border: 2px solid red;
-        border-radius: 50%;
-        background: black;
-        margin: 0 auto;
-    } */
+    .chart h2 {
+        position: absolute;
+        top:9rem;
+        left:11rem;
+        
+    }
+
+    .skill-content {
+        text-align: center;
+        width: 50%; 
+    }
+   
+    /* For circles  https://www.cssscript.com/circle-progress-indicator-svg/*/
+    svg {
+        width: 60%;;
+        height: 150px;
+        z-index: 1000;
+      }
+      
+      svg circle
+      {
+        fill: none;
+        stroke: #191919;
+        stroke-width: 10;
+        stroke-linecap: round;
+        transform: translate(5px, 5px);
+      }
+      
+      /* this is for upper bar 90% */
+      svg circle:nth-child(2) {
+        stroke-dasharray: 440;
+        stroke-dashoffset: 440;
+      }
+      
+      .chart:nth-child(1) svg circle:nth-child(2) {
+        stroke-dashoffset: calc(440 - (440 * 80) / 100);
+        stroke: #b9cc0a;
+      }
+      
+      .chart:nth-child(2) svg circle:nth-child(2) {
+        stroke-dashoffset: calc(440 - (440 * 50) / 100);
+        stroke: #00a1ff;
+      }
+      
+      .chart:nth-child(3) svg circle:nth-child(2) {
+        stroke-dashoffset: calc(440 - (440 * 70) / 100);
+        stroke: #ff04f7;
+      }
+      .chart:nth-child(4) svg circle:nth-child(2) {
+        stroke-dashoffset: calc(440 - (440 * 90) / 100);
+        stroke: #134ae2;
+      }
+      
+/* End Circle */
+
     
-    /* new code  */
-    .percent1,  svg, .circle {
-        width: 100px;
-        height: 100px;
-    }
-    /* end code */
-
-
-    /* end our services */
+/* ###################### End Skill Section ##################################### */
 
 /* ###################### Packages Section ##################################### */
 #packages {
@@ -793,17 +852,16 @@ background: #e9e2e2;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 100%;
+    
 }
 
 .packages-deal {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     /* border: 2px solid black; */
     margin-bottom: 2rem;
     box-shadow: 0px 5px 10px 0px #aaaaaa;
-    
-    
+    width: 80%;
     
 }
 .deal h2 {
@@ -834,27 +892,7 @@ background: #e9e2e2;
     margin: 2rem;
     /* width: 100%; */
     transition: transform 2s ease-in-out;
-    /* animation: motion 6s ease-in-out 0.5s infinite; */
 }
-
-
-/* @keyframes motion {
-    0% {
-        transform: scale(0);
-    }
-    25% {
-        transform: scale(1.2);
-    }
-    50% {
-        transform: scale(1.5);
-    }
-    75% {
-        transform: scale(1.2);
-    }
-    100% {
-        transform: scale(0);
-    }
-} */
 
 .packages-deal .deal:hover{
     transform: scale(1.5);
@@ -990,6 +1028,10 @@ section #contact
     }
     .social-media-footer i {
         font-size: 2rem;
+        color:#d3afb2;
+    }
+    .footer-item i {
+       
     }
 
     /* .footer-item::after {
